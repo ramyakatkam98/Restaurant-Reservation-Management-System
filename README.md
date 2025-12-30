@@ -300,11 +300,24 @@ Given additional time, the following enhancements would be valuable:
 For detailed deployment instructions, see [DEPLOYMENT.md](./DEPLOYMENT.md)
 
 #### Step 1: Push to GitHub
+
+**PowerShell (Windows):**
+```powershell
+git init
+git add .
+git commit -m "Initial commit"
+git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+git branch -M main
+git push -u origin main
+```
+
+**Bash (Linux/Mac):**
 ```bash
 git init
 git add .
 git commit -m "Initial commit"
 git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+git branch -M main
 git push -u origin main
 ```
 
@@ -330,10 +343,25 @@ git push -u origin main
 
 #### Step 4: Seed Database
 After backend is deployed, seed tables:
+
+**PowerShell (Windows):**
+```powershell
+# Navigate to server directory
+cd server
+
+# Update .env with production MONGO_URI, then run:
+node seed/tables.seed.js
+node seed/admin.seed.js
+```
+
+**Bash (Linux/Mac):**
 ```bash
-# Via Render Shell or locally with production MONGO_URI
-node server/seed/tables.seed.js
-node server/seed/admin.seed.js
+# Navigate to server directory
+cd server
+
+# Update .env with production MONGO_URI, then run:
+node seed/tables.seed.js
+node seed/admin.seed.js
 ```
 
 #### Step 5: Update CORS

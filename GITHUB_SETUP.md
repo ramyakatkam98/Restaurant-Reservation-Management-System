@@ -15,9 +15,10 @@
 
 ### Step 2: Initialize Git in Your Project
 
-Open terminal/command prompt in your project root:
+Open PowerShell in your project root:
 
-```bash
+**For PowerShell:**
+```powershell
 # Navigate to project root
 cd "C:\Users\91849\Downloads\VibeCoders_Restaurant_Reservation_Full_Project\VibeCoders_Restaurant_Reservation_Full_Project\VibeCoders_Restaurant_Reservation"
 
@@ -31,9 +32,18 @@ git add .
 git commit -m "Initial commit: Restaurant Reservation Management System"
 ```
 
+**For Command Prompt (CMD):**
+```cmd
+cd "C:\Users\91849\Downloads\VibeCoders_Restaurant_Reservation_Full_Project\VibeCoders_Restaurant_Reservation_Full_Project\VibeCoders_Restaurant_Reservation"
+git init
+git add .
+git commit -m "Initial commit: Restaurant Reservation Management System"
+```
+
 ### Step 3: Connect to GitHub
 
-```bash
+**PowerShell/CMD:**
+```powershell
 # Add remote repository (replace with your actual repository URL)
 git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
 
@@ -54,7 +64,8 @@ git push -u origin main
 
 When you make changes:
 
-```bash
+**PowerShell/CMD:**
+```powershell
 # Check what changed
 git status
 

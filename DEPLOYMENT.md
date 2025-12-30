@@ -42,6 +42,28 @@ Thumbs.db
 
 ### 1.2 Initialize Git and Push to GitHub
 
+**For PowerShell (Windows):**
+```powershell
+# Navigate to project root
+cd "VibeCoders_Restaurant_Reservation_Full_Project\VibeCoders_Restaurant_Reservation"
+
+# Initialize git (if not already done)
+git init
+
+# Add all files
+git add .
+
+# Create initial commit
+git commit -m "Initial commit: Restaurant Reservation Management System"
+
+# Create a new repository on GitHub (via web interface)
+# Then connect and push:
+git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+git branch -M main
+git push -u origin main
+```
+
+**For Bash/Linux/Mac:**
 ```bash
 # Navigate to project root
 cd VibeCoders_Restaurant_Reservation_Full_Project/VibeCoders_Restaurant_Reservation
@@ -229,9 +251,14 @@ After backend is deployed, seed the tables:
      node seed/admin.seed.js
      ```
 
-2. **Option 2: Via Local Machine**
-   - Update `.env` with production MongoDB URI
-   - Run seed scripts locally (they'll connect to production DB)
+2. **Option 2: Via Local Machine (PowerShell)**
+   - Update `.env` in server directory with production MongoDB URI
+   - Run seed scripts locally (they'll connect to production DB):
+     ```powershell
+     cd server
+     node seed/tables.seed.js
+     node seed/admin.seed.js
+     ```
 
 3. **Option 3: Create API Endpoint** (for admin use)
    - Add a seed endpoint in admin routes (temporary)
